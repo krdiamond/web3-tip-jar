@@ -1,11 +1,19 @@
 <template>
   <div id="app">
+    <div>
+      The Ukraine Goverment is accepting donations in Ether <a href="https://www.bloomberg.com/news/articles/2022-02-26/ukraine-soliciting-crypto-donations-after-russian-invasion" target="_blank">(Bloomberg)</a>
+    </div>
+    <div>
+      <a href="https://etherscan.io/address/0x165CD37b4C644C2921454429E7F9358d18A45e14" target="_blank">Click here to see a log of all previous donations</a>
+    </div>
     <form v-if="showTipForm">
-      <label>Send me Eth!</label>
+      <label></label>
       <input v-model="ethValue">
-      <button @click.prevent="submit($event)">Submit</button>
+      <button @click.prevent="submit($event)">Submit Ether Donation</button>
     </form>
-    <div v-else>Please install an Eth wallet (ex: https://metamask.io/)</div>
+    <div v-else class="form-alt" >Please install a crypto wallet to see the donation form (ex: https://metamask.io/)</div>
+    <div><img src="./assets/govt-tweet.png"></div>
+    <div><img src="./assets/vitalik-confirmation.png"></div>
   </div>
 </template>
 
@@ -42,7 +50,7 @@ export default {
           method: "eth_sendTransaction",
           params: [{
             from: accounts[0],
-            to: "0x039C46B3bDd3cE8F7FdE0BaaBA1b3295E56ba85d",
+            to: "0x165CD37b4C644C2921454429E7F9358d18A45e14",
             value: this.web3.utils.toHex(wei)
           }]
         })
