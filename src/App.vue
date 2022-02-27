@@ -6,10 +6,10 @@
     <div>
       <a href="https://etherscan.io/address/0x165CD37b4C644C2921454429E7F9358d18A45e14" target="_blank">Click here to see a log of all previous donations</a>
     </div>
-    <form v-if="showTipForm">
-      <label>Submitting this form will pop open your crypto wallet and allow you to send your Ether</label>
+    <form v-if="showTipForm">   
       <input v-model="ethValue">
       <button @click.prevent="submit($event)">Submit Ether Donation</button>
+      <label>***Submitting this form will pop open your crypto wallet and allow you to send your Ether</label>
     </form>
 
     <div v-else class="form-alt" >Please install a crypto wallet to see the donation form (ex: https://metamask.io/)</div>
