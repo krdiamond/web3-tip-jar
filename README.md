@@ -1,5 +1,3 @@
-# web3-tip-jar
-
 ## Project setup
 ```
 npm install
