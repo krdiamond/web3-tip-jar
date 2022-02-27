@@ -12,7 +12,7 @@
       <label>***Submitting this form will pop open your crypto wallet and allow you to send your Ether</label>
     </form>
 
-    <div v-else class="form-alt" >Please install a crypto wallet to see the donation form (ex: https://metamask.io/)</div>
+    <div v-else class="form-alt" >Please install a crypto wallet in your browser on desktop to see the donation form (ex: https://metamask.io/)</div>
     <div><img src="./assets/govt-tweet.png"></div>
     <div><img src="./assets/vitalik-confirmation.png"></div>
   </div>
